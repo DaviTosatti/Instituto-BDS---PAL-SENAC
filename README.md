@@ -1,24 +1,54 @@
-# Instituto-BdS
-Projeto Ano Letivo
+# Instituto BdS · PAL Senac
 
-A ideia desse projeto é, inicialmente, usar de um site feito em HTML. A ideia é conscientizar proletários e sindicalistas (assim como qualquer outra pessoa que tenha interesse) em leis trabalhistas e adversidades encontradas no trabalho com os meios apresentados.
-Nosso projeto visa conscientizar sobre os direitos trabalhistas, destacando a importância do trabalho justo e da liberdade de escolha. Queremos informar os trabalhadores sobre seus direitos e alertá-los sobre más condições de trabalho, enquanto promovemos empresas que oferecem condições dignas, tanto financeiramente quanto psicologicamente. Inicialmente, buscamos alcançar os jovens que estão prestes a ingressar no mercado de trabalho, orientando-os na escolha de boas empresas.
+**Versão original do projeto escolar, preservada na branch `legacy`.**
 
+Projeto desenvolvido no curso técnico em informática do Senac Lapa Tito para conscientizar trabalhadores, especialmente jovens entrando no mercado de trabalho, sobre direitos trabalhistas e condições dignas de trabalho.
 
-Como Configurar e Utilizar
-Para que o site funcione corretamente, é necessário configurá-lo no ambiente de desenvolvimento adequado. Siga os passos abaixo:
+O site reúne conteúdo informativo, cadastro e login de usuários e empresas, perfis de empresas, avaliações e rankings. Foi construído com **PHP, MySQL, HTML e CSS**, usando **XAMPP** como ambiente local.
 
-Pré-requisitos:
-O projeto foi desenvolvido para ser utilizado com o XAMPP, uma solução open-source que facilita a criação de um servidor local. O XAMPP inclui ferramentas como Apache, MySQL, PHP e Perl. Ele é essencial para executar aplicações PHP em ambiente local.
+## Versões do projeto
 
-Para adquirir o XAMPP, acesse o site oficial: https://www.apachefriends.org/
-Faça o download da versão correspondente ao seu sistema operacional (Windows, macOS ou Linux).
-Após o download, instale o XAMPP e inicie os serviços necessários (Apache e MySQL).
-Instalação do Projeto:
+| Branch | Conteúdo |
+| --- | --- |
+| [`main`](https://github.com/DaviTosatti/Instituto-BDS---PAL-SENAC/tree/main) | Versão com código organizado em `src/` e scripts SQL em `database/`. |
+| [`legacy`](https://github.com/DaviTosatti/Instituto-BDS---PAL-SENAC/tree/legacy) | Estrutura original do projeto escolar, incluindo arquivos SQL e o pacote da época. |
 
-Após clonar ou baixar o repositório do projeto, copie os arquivos e cole-os dentro da pasta htdocs, localizada no diretório onde o XAMPP foi instalado.
-Exemplo no Windows: C:\xampp\htdocs
-Certifique-se de que todos os arquivos do projeto estejam organizados conforme o repositório original.
+Esta cópia foi publicada por **Davi Tosatti**, integrante e colaborador do projeto, a partir de [PHenrique07/Instituto-BdS](https://github.com/PHenrique07/Instituto-BdS). O histórico de commits foi preservado. O código foi desenvolvido em equipe; os autores dos commits representam quem realizou os envios ao GitHub. Nesta branch, apenas a apresentação deste README foi atualizada.
 
+## Estrutura original
 
-Certifique-se de ajustar o caminho do banco de dados no código conforme a localização do arquivo em seu computador. Além disso, garanta que o XAMPP esteja ativo, com os serviços MySQL e Apache devidamente iniciados.
+```text
+PALBDSDEFINITIVO/
+├── BDS 16 11.sql
+├── BDS DEFINITIVO.sql
+└── PALBDS xampp/
+    ├── PALBDS.rar
+    └── PALBDS/
+        ├── Listas/         # Páginas administrativas
+        └── PAL/            # Páginas PHP, estilos, imagens e conexão
+```
+
+## Ambiente local
+
+1. Instale o [XAMPP](https://www.apachefriends.org/) e inicie **Apache** e **MySQL**.
+2. Clone esta versão:
+
+   ```bash
+   git clone --branch legacy https://github.com/DaviTosatti/Instituto-BDS---PAL-SENAC.git Instituto-BDS-legacy
+   ```
+
+3. Copie a pasta `PALBDSDEFINITIVO/PALBDS xampp/PALBDS/` para `C:\xampp\htdocs\PALBDS\` no Windows, ou para o `htdocs` da sua instalação.
+4. Revise os scripts SQL antes de importá-los pelo phpMyAdmin. Eles pertencem à versão escolar e incluem comandos de desenvolvimento: `BDS DEFINITIVO.sql`, por exemplo, termina com `DROP TABLE Avaliacao`. Para manter essa tabela, remova esse comando na cópia local usada na importação. O script já contém `CREATE DATABASE BDS` e deve ser usado em um ambiente local separado.
+5. Ajuste `PAL/conexao-bds.php` com os dados do seu MySQL local. O arquivo original usa a configuração padrão de desenvolvimento do XAMPP.
+6. Abra [localhost/PALBDS/PAL/index.php](http://localhost/PALBDS/PAL/index.php).
+
+Esta branch registra a implementação da época. Para consultar a estrutura reorganizada e seu arquivo de exemplo de conexão, use a branch [`main`](https://github.com/DaviTosatti/Instituto-BDS---PAL-SENAC/tree/main).
+
+## Equipe
+
+- [Pedro Henrique Santos da Silva](https://www.linkedin.com/in/pedro-henrique-santos-da-silva-40b521349/)
+- [Davi Tosatti](https://www.linkedin.com/in/davi-tosatti-042b7519a/)
+- [Gabriel Vaz Ferreira](https://www.linkedin.com/in/gabriel-vaz-284608351/)
+- Lucas Henrique Furtado da Rosa Pio
+- [Igor Costa](https://www.linkedin.com/in/igor-costa-417405355/)
+- [Carlos Augusto Pires](https://www.linkedin.com/in/carlos-pires01/)
